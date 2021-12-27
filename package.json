@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/TOXIC-DEVIL/WhatsAlexa#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "github:TOXIC-DEVIL/baileys",
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "@lh2020/speedtest-net": "^2.1.1",
     "wa-sticker-formatter": "3.6.0",
     "browser-id3-writer": "^4.4.0",
