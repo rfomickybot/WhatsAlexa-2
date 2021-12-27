@@ -110,9 +110,9 @@ and at the end WhatsApp Team deleted your account. DON'T BLAME US.
 
 No personal support will be provided / We won't spoon feed you. 
 If you need help
-you can contact - 
+you can contact TOXIC DEVIL ( Developer ) by clicking the name below - 
 ```
-[TOXIC DEVIL](https://wa.me/2349053311892?text=I%20Have%20Seen%20Your%20WhatsAlexa%20Ropo%20😍%20I%20Got%20Your%20Number%20From%20GitHub%20😉)
+**[TOXIC DEVIL](https://wa.me/2349053311892?text=I%20Have%20Seen%20Your%20WhatsAlexa%20Ropo%20😍%20I%20Got%20Your%20Number%20From%20GitHub%20😉)**
 
 ## 👨‍💻 Developers & Contributors 👨‍💻
 
