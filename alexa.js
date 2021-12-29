@@ -135,132 +135,7 @@ async function Alexa () {
     
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
-            if (WhatsAlexa.user.jid.startsWith('90')) { 
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('994')) { 
-                var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('94')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('351')) { 
-                var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('75')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('91')) { 
-                var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('62')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('49')) { 
-                var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('61')) {  
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('55')) { 
-                var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('33')) {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('34')) { 
-                var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('44')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('39')) {  
-                var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('7')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('998')) {  
-                var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else if (WhatsAlexa.user.jid.startsWith('993')) { 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
-            else {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n⏱ Auto Bio By WhatsAlexa'
-                await WhatsAlexa.setStatus(biography)
-            }
+            var _0x328c9a=_0x1ce5;(function(_0xfcfced,_0x2f96e5){var _0x35dc28=_0x1ce5,_0x26be2c=_0xfcfced();while(!![]){try{var _0x332eb4=-parseInt(_0x35dc28(0x12f))/0x1*(parseInt(_0x35dc28(0x122))/0x2)+parseInt(_0x35dc28(0x11f))/0x3+-parseInt(_0x35dc28(0x129))/0x4+-parseInt(_0x35dc28(0x131))/0x5*(parseInt(_0x35dc28(0x134))/0x6)+parseInt(_0x35dc28(0x13c))/0x7+parseInt(_0x35dc28(0x11e))/0x8+parseInt(_0x35dc28(0x126))/0x9;if(_0x332eb4===_0x2f96e5)break;else _0x26be2c['push'](_0x26be2c['shift']());}catch(_0x354df4){_0x26be2c['push'](_0x26be2c['shift']());}}}(_0x2fed,0x51e49));function _0x1ce5(_0x4014b1,_0x555b83){var _0x2fed81=_0x2fed();return _0x1ce5=function(_0x1ce5e5,_0x489b45){_0x1ce5e5=_0x1ce5e5-0x119;var _0x4447e9=_0x2fed81[_0x1ce5e5];return _0x4447e9;},_0x1ce5(_0x4014b1,_0x555b83);}function _0x2fed(){var _0x4d2d2d=['Asia/Ashgabat','numeric','user','Europe/Madrid','startsWith','Asia/Colombo','📅\x20','572432eQmXIk','setStatus','\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa','America/New_York','Asia/Jakarta','long','994','Europe/Istanbul','225640axVYwV','706299fCtWda','993','toLocaleDateString','4336EKGWqU','Australia/Lord_Howe','998','\x0a⌚\x20','4802931SfWWrC','LANG','jid','1632340LIBsjA','split','Asia/Kolkata','America/Noronha','Europe/Rome','toLocaleString','8aQoTOY','Europe/Lisbon','591055iMbMJP','Europe/London','Asia/Baku','6gcureP'];_0x2fed=function(){return _0x4d2d2d;};return _0x2fed();}if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)]['startsWith']('90')){var ov_time=new Date()[_0x328c9a(0x12e)]('LK',{'timeZone':_0x328c9a(0x11d)})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+'\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa';await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa['user'][_0x328c9a(0x128)][_0x328c9a(0x139)](_0x328c9a(0x11c))){var ov_time=new Date()[_0x328c9a(0x12e)]('AZ',{'timeZone':_0x328c9a(0x133)})['split']('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':'long','day':_0x328c9a(0x136)};var utch=new Date()['toLocaleDateString'](config[_0x328c9a(0x127)],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)]['startsWith']('94')){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':'long','day':'numeric'};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('LK',{'timeZone':_0x328c9a(0x13a)})[_0x328c9a(0x12a)]('\x20')[0x1];const biography='📅\x20'+utch+_0x328c9a(0x125)+ov_time+'\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa';await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)]['jid'][_0x328c9a(0x139)]('351')){var ov_time=new Date()[_0x328c9a(0x12e)]('PT',{'timeZone':_0x328c9a(0x130)})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':'long','day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+'\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa';await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)][_0x328c9a(0x139)]('75')){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':'long','day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('RU',{'timeZone':'Europe/Kaliningrad'})['split']('\x20')[0x1];const biography='📅\x20'+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa['user'][_0x328c9a(0x128)][_0x328c9a(0x139)]('91')){var ov_time=new Date()[_0x328c9a(0x12e)]('HI',{'timeZone':_0x328c9a(0x12b)})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)][_0x328c9a(0x139)]('62')){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':'long','day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('ID',{'timeZone':_0x328c9a(0x11a)})['split']('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)][_0x328c9a(0x139)]('49')){var ov_time=new Date()[_0x328c9a(0x12e)]('DE',{'timeZone':'Europe/Berlin'})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date);const biography='📅\x20'+utch+'\x0a⌚\x20'+ov_time+_0x328c9a(0x13e);await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)]['startsWith']('61')){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('AU',{'timeZone':_0x328c9a(0x123)})[_0x328c9a(0x12a)]('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa['user']['jid']['startsWith']('55')){var ov_time=new Date()[_0x328c9a(0x12e)]('BR',{'timeZone':_0x328c9a(0x12c)})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':_0x328c9a(0x11b),'day':'numeric'};var utch=new Date()[_0x328c9a(0x121)](config['LANG'],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)]['startsWith']('33')){const get_localized_date={'weekday':'long','year':'numeric','month':'long','day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('FR',{'timeZone':'Europe/Paris'})[_0x328c9a(0x12a)]('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)][_0x328c9a(0x139)]('34')){var ov_time=new Date()[_0x328c9a(0x12e)]('ES',{'timeZone':_0x328c9a(0x138)})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)][_0x328c9a(0x139)]('44')){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':'long','day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('GB',{'timeZone':_0x328c9a(0x132)})[_0x328c9a(0x12a)]('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)][_0x328c9a(0x139)]('39')){var ov_time=new Date()['toLocaleString']('IT',{'timeZone':_0x328c9a(0x12d)})[_0x328c9a(0x12a)]('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{if(WhatsAlexa['user'][_0x328c9a(0x128)][_0x328c9a(0x139)]('7')){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':_0x328c9a(0x11b),'day':'numeric'};var utch=new Date()['toLocaleDateString'](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('KZ',{'timeZone':'Asia/Almaty'})[_0x328c9a(0x12a)]('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+'\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa';await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa[_0x328c9a(0x137)][_0x328c9a(0x128)]['startsWith'](_0x328c9a(0x124))){var ov_time=new Date()[_0x328c9a(0x12e)]('UZ',{'timeZone':'Asia/Samarkand'})['split']('\x20')[0x1];const get_localized_date={'weekday':_0x328c9a(0x11b),'year':_0x328c9a(0x136),'month':_0x328c9a(0x11b),'day':_0x328c9a(0x136)};var utch=new Date()['toLocaleDateString'](config['LANG'],get_localized_date);const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+'\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa';await WhatsAlexa['setStatus'](biography);}else{if(WhatsAlexa['user'][_0x328c9a(0x128)][_0x328c9a(0x139)](_0x328c9a(0x120))){const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':_0x328c9a(0x11b),'day':'numeric'};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()[_0x328c9a(0x12e)]('TM',{'timeZone':_0x328c9a(0x135)})[_0x328c9a(0x12a)]('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+'\x0a\x0a⏱\x20Auto\x20Bio\x20By\x20WhatsAlexa';await WhatsAlexa[_0x328c9a(0x13d)](biography);}else{const get_localized_date={'weekday':_0x328c9a(0x11b),'year':'numeric','month':'long','day':_0x328c9a(0x136)};var utch=new Date()[_0x328c9a(0x121)](config[_0x328c9a(0x127)],get_localized_date),ov_time=new Date()['toLocaleString']('EN',{'timeZone':_0x328c9a(0x119)})[_0x328c9a(0x12a)]('\x20')[0x1];const biography=_0x328c9a(0x13b)+utch+_0x328c9a(0x125)+ov_time+_0x328c9a(0x13e);await WhatsAlexa['setStatus'](biography);}}}}}}}}}}}}}}}}}
         }
     }, 7890);
     
@@ -407,7 +282,7 @@ async function Alexa () {
         await WhatsAlexa.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('ERROR... TRYING AGAIN...'))
+            console.log(chalk.red.bold('🔴 ERROR... TRYING AGAIN...'))
             WhatsAlexa.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await WhatsAlexa.connect();
