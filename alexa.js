@@ -30,11 +30,13 @@ const WhatsAlexaDB = config.DATABASE.define('WhatsAlexa', {
     }
 });
 
-fs.readdirSync('./plugins/sql/').forEach(plugin => {
-    if(path.extname(plugin).toLowerCase() == '.js') {
-        require('./plugins/sql/' + plugin);
-    }
-});
+function loadPlugins() {
+   function _0x3e5a(_0x438df2,_0x3645ae){var _0x9e5df3=_0x9e5d();return _0x3e5a=function(_0x3e5a5c,_0x505fce){_0x3e5a5c=_0x3e5a5c-0x1ba;var _0x2f0f59=_0x9e5df3[_0x3e5a5c];return _0x2f0f59;},_0x3e5a(_0x438df2,_0x3645ae);}function _0x9e5d(){var _0x137505=['1634502VViRVb','9405gSQKlj','toLowerCase','readdirSync','2jYJJND','1809500ZhvZuq','extname','7218783jEpkUz','./plugins/sql/','7OJzRHB','10WPNOIN','1692255xQnoDp','998154FAgopZ','1255008mbMVXg','.js','forEach'];_0x9e5d=function(){return _0x137505;};return _0x9e5d();}var _0x12d80e=_0x3e5a;(function(_0x4129f9,_0xe27166){var _0x240fa2=_0x3e5a,_0x459a20=_0x4129f9();while(!![]){try{var _0x1b3ce7=-parseInt(_0x240fa2(0x1c1))/0x1*(-parseInt(_0x240fa2(0x1c4))/0x2)+-parseInt(_0x240fa2(0x1bc))/0x3+-parseInt(_0x240fa2(0x1c5))/0x4+parseInt(_0x240fa2(0x1bb))/0x5+parseInt(_0x240fa2(0x1c0))/0x6*(-parseInt(_0x240fa2(0x1c9))/0x7)+parseInt(_0x240fa2(0x1bd))/0x8+parseInt(_0x240fa2(0x1c7))/0x9*(parseInt(_0x240fa2(0x1ba))/0xa);if(_0x1b3ce7===_0xe27166)break;else _0x459a20['push'](_0x459a20['shift']());}catch(_0x1461b7){_0x459a20['push'](_0x459a20['shift']());}}}(_0x9e5d,0x3cddd),fs[_0x12d80e(0x1c3)]('./plugins/sql/')[_0x12d80e(0x1bf)](_0x1a8a38=>{var _0x31641b=_0x12d80e;path[_0x31641b(0x1c6)](_0x1a8a38)[_0x31641b(0x1c2)]()==_0x31641b(0x1be)&&require(_0x31641b(0x1c8)+_0x1a8a38);}));
+}
+
+async function loadExternalPlugins() {
+   var _0xba8743=_0x274b;function _0x274b(_0x45abea,_0x1e3bcb){var _0x3de8bd=_0x3de8();return _0x274b=function(_0x274b05,_0x477205){_0x274b05=_0x274b05-0x80;var _0x4af4ae=_0x3de8bd[_0x274b05];return _0x4af4ae;},_0x274b(_0x45abea,_0x1e3bcb);}(function(_0x41da64,_0x554fb9){var _0x4e78e2=_0x274b,_0x3a29f3=_0x41da64();while(!![]){try{var _0x189e8b=-parseInt(_0x4e78e2(0x86))/0x1*(-parseInt(_0x4e78e2(0x94))/0x2)+-parseInt(_0x4e78e2(0x96))/0x3+-parseInt(_0x4e78e2(0x9b))/0x4*(-parseInt(_0x4e78e2(0x85))/0x5)+parseInt(_0x4e78e2(0x8f))/0x6*(parseInt(_0x4e78e2(0x8e))/0x7)+-parseInt(_0x4e78e2(0x91))/0x8*(parseInt(_0x4e78e2(0x8c))/0x9)+parseInt(_0x4e78e2(0x88))/0xa*(-parseInt(_0x4e78e2(0x87))/0xb)+-parseInt(_0x4e78e2(0x8d))/0xc*(parseInt(_0x4e78e2(0x95))/0xd);if(_0x189e8b===_0x554fb9)break;else _0x3a29f3['push'](_0x3a29f3['shift']());}catch(_0xef1122){_0x3a29f3['push'](_0x3a29f3['shift']());}}}(_0x3de8,0x2b33f),console[_0xba8743(0x8b)](chalk['blueBright'][_0xba8743(0x99)](_0xba8743(0x97))));var plugins=await plugindb[_0xba8743(0x98)][_0xba8743(0x92)]();plugins['map'](async _0x47a45e=>{var _0x1684c9=_0xba8743;try{if(!fs[_0x1684c9(0x84)]('./plugins/'+_0x47a45e[_0x1684c9(0x9a)]['name']+'.js')){console[_0x1684c9(0x8b)](_0x47a45e['dataValues']['name']);var _0x2adbb1=await got(_0x47a45e[_0x1684c9(0x9a)]['url']);_0x2adbb1[_0x1684c9(0x8a)]==0xc8&&(fs[_0x1684c9(0x90)](_0x1684c9(0x81)+_0x47a45e[_0x1684c9(0x9a)]['name']+_0x1684c9(0x82),_0x2adbb1[_0x1684c9(0x83)]),require(_0x1684c9(0x81)+_0x47a45e[_0x1684c9(0x9a)][_0x1684c9(0x89)]+_0x1684c9(0x82)));}}catch{console[_0x1684c9(0x8b)](_0x1684c9(0x93)+_0x47a45e[_0x1684c9(0x9a)][_0x1684c9(0x89)]+_0x1684c9(0x80));}}),console[_0xba8743(0x8b)](chalk['blueBright'][_0xba8743(0x99)]('✅\x20COMMANDS\x20INSTALLED\x20SUCCESSFULLY!'));function _0x3de8(){var _0x44194e=['559917nyLWWn','18672YwZoyK','14wniarD','904416WedDZu','writeFileSync','32OtQCzv','findAll','❌\x20PLUGIN\x20(','914qmHDMk','546cQaGgY','100197kvNOzi','⬇️\x20INSTALLING\x20COMMANDS...','PluginDB','italic','dataValues','495916QYbHXj',')\x20HAS\x20BEEN\x20CORRUPTED!','./plugins/','.js','body','existsSync','5SazNuQ','693hyvnLI','33QROzrV','725300uCMLfN','name','statusCode','log'];_0x3de8=function(){return _0x44194e;};return _0x3de8();}
+}
 
 var OWN = { ff: '0' }
 const plugindb = require('./plugins/sql/plugin');
@@ -86,7 +88,7 @@ async function Alexa () {
 
     WhatsAlexa.on ('open', async () => {
         console.log(
-            chalk.blueBright.italic('🔁 CHECKING FOR COMMANDS...')
+            chalk.blueBright.italic('🔁 LOADING YOUR SESSION...')
         );
 
         const authInfo = WhatsAlexa.base64EncodedAuthInfo();
@@ -97,41 +99,20 @@ async function Alexa () {
         }
     })    
 
+        console.log(
+            chalk.blueBright.italic('✅️ SUCCESSFULLY LOADED SESSION!')
+        );
+
     WhatsAlexa.on('connecting', async () => {
-        console.log(`${chalk.green.bold('WhatsAlexa')}
-${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
-${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
+        console.log(`⭕️ WAITING FOR CONNECTION...`);
     });
     
-
     WhatsAlexa.on('open', async () => {
         console.log(
-            chalk.green.bold('🛑 NO COMMANDS FOUND!')
+            chalk.blueBright.italic('🔁 CHECKING FOR EXTERNAL COMMANDS...')
         );
 
-        console.log(
-            chalk.blueBright.italic('⬇️ INSTALLING COMMANDS...')
-        );
-
-        var plugins = await plugindb.PluginDB.findAll();
-        plugins.map(async (plugin) => {
-          try {
-              if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
-                  console.log(plugin.dataValues.name);
-                  var response = await got(plugin.dataValues.url);
-                  if (response.statusCode == 200) {
-                      fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
-                      require('./plugins/' + plugin.dataValues.name + '.js');
-                  }     
-              }
-          } catch {
-              console.log('❌ PLUGIN (' + plugin.dataValues.name + ') HAS BEEN CORRUPTED!')
-          }
-        });
-
-        console.log(
-            chalk.blueBright.italic('✅ COMMANDS INSTALLED SUCCESSFULLY!')
-        );
+        await loadExternalPlugins();
 
         fs.readdirSync('./plugins').forEach(plugin => {
             if(path.extname(plugin).toLowerCase() == '.js') {
@@ -139,10 +120,8 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             }
         });
 
-        console.log(
-            chalk.green.bold('🎉 BOT IS NOW ACTIVE IN YOUR ACCOUNT!')
-        );
-        
+        function _0xccb3(){var _0x1597e6=['green','76540CjMqFx','797496yHdlhe','22GDsybE','ATS','bold','352816MiUEzx','45754ghyTZE','A\x20IS\x20NOW\x20ACTIVE\x20IN\x20YOUR\x20ACCOUNT!','889923jVdypB','3576769PsQJbr','128kiBpGY','8236053MwaQGY'];_0xccb3=function(){return _0x1597e6;};return _0xccb3();}var _0x404828=_0x3fe5;function _0x3fe5(_0x3837a9,_0x37675f){var _0xccb320=_0xccb3();return _0x3fe5=function(_0x3fe574,_0x4b349c){_0x3fe574=_0x3fe574-0x1c2;var _0x39b1f1=_0xccb320[_0x3fe574];return _0x39b1f1;},_0x3fe5(_0x3837a9,_0x37675f);}(function(_0xbd7e6a,_0xed2299){var _0x38c222=_0x3fe5,_0x384abe=_0xbd7e6a();while(!![]){try{var _0x4e926a=parseInt(_0x38c222(0x1cd))/0x1*(parseInt(_0x38c222(0x1c4))/0x2)+parseInt(_0x38c222(0x1c6))/0x3+-parseInt(_0x38c222(0x1c8))/0x4*(parseInt(_0x38c222(0x1cb))/0x5)+-parseInt(_0x38c222(0x1cc))/0x6+-parseInt(_0x38c222(0x1c7))/0x7+-parseInt(_0x38c222(0x1c3))/0x8+parseInt(_0x38c222(0x1c9))/0x9;if(_0x4e926a===_0xed2299)break;else _0x384abe['push'](_0x384abe['shift']());}catch(_0x22fc0b){_0x384abe['push'](_0x384abe['shift']());}}}(_0xccb3,0x8327b),console['log'](chalk[_0x404828(0x1ca)][_0x404828(0x1c2)]('🎉\x20W'+'H'+_0x404828(0x1ce)+'AL'+'EX'+_0x404828(0x1c5))));
+
          if (config.LANG == 'EN') {
              await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: `『 WhatsAlexa 』\n\nHello ${WhatsAlexa.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using WhatsAlexa 💖`});
              
@@ -345,10 +324,6 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
             var abc = config.BLOCKCHAT.split(',');                            
             if(td.key.remoteJid.endsWith('@g.us') ? abc.includes(td.key.remoteJid.split('@')[0]) : abc.includes(td.participant ? td.participant.split('@')[0] : td.key.remoteJid.split('@')[0])) return;
         }
-        if (config.SUPPORT == '120363039806907810') {     
-            var nsup = config.SUPPORT.split(',');                            
-            if(td.key.remoteJid.endsWith('@g.us') ? nsup.includes(td.key.remoteJid.split('@')[0]) : nsup.includes(td.participant ? td.participant.split('@')[0] : td.key.remoteJid.split('@')[0])) return;
-        }
 
         events.commands.map(
             async (command) =>  {
@@ -379,13 +354,6 @@ ${chalk.blue.italic('Made By TOXIC-DEVIL')}`);
                         
                     if ((config.SUDO !== false && td.key.fromMe === false && command.fromMe === true &&
                         (td.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(td.participant.split('@')[0]) : td.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(td.key.remoteJid.split('@')[0]) : td.key.remoteJid.split('@')[0] == config.SUDO)
-                    ) || command.fromMe === td.key.fromMe || (command.fromMe === false && !td.key.fromMe)) {
-                        if (command.onlyPinned && chat.pin === undefined) return;
-                        if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-                        else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-                    }
-                    if ((OWN.ff == "0" && td.key.fromMe === false && command.fromMe === true &&
-                        (td.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(td.participant.split('@')[0]) : td.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(td.key.remoteJid.split('@')[0]) : td.key.remoteJid.split('@')[0] == OWN.ff)
                     ) || command.fromMe === td.key.fromMe || (command.fromMe === false && !td.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
