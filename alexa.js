@@ -52,6 +52,8 @@ if (!Date.now) {
     Date.now = function() { return new Date().getTime(); }
 }
 
+var _0x245488=_0x5d7c;function _0x5d7c(_0x11a60c,_0x4c42af){var _0x55da64=_0x55da();return _0x5d7c=function(_0x5d7c7e,_0x5c4a3a){_0x5d7c7e=_0x5d7c7e-0x1b9;var _0x42bcd4=_0x55da64[_0x5d7c7e];return _0x42bcd4;},_0x5d7c(_0x11a60c,_0x4c42af);}function _0x55da(){var _0x34f261=['5279bcTwYb','1334275RXNagz','64nXWQdK','long','toLocaleDateString','```⏱\x20Time\x20:','21954raArCp','numeric','307488WDRFgg','4kKEGfW','223029TgLXJs','74282EBKtxG','toLocaleString','389040IAwYyF','84lElhti'];_0x55da=function(){return _0x34f261;};return _0x55da();}(function(_0x41abc5,_0x532a47){var _0x386543=_0x5d7c,_0x489fea=_0x41abc5();while(!![]){try{var _0x23b577=parseInt(_0x386543(0x1c0))/0x1+-parseInt(_0x386543(0x1bc))/0x2+parseInt(_0x386543(0x1b9))/0x3*(parseInt(_0x386543(0x1ba))/0x4)+parseInt(_0x386543(0x1c1))/0x5+-parseInt(_0x386543(0x1c6))/0x6*(-parseInt(_0x386543(0x1bf))/0x7)+-parseInt(_0x386543(0x1c2))/0x8*(parseInt(_0x386543(0x1bb))/0x9)+-parseInt(_0x386543(0x1be))/0xa;if(_0x23b577===_0x532a47)break;else _0x489fea['push'](_0x489fea['shift']());}catch(_0x39b29f){_0x489fea['push'](_0x489fea['shift']());}}}(_0x55da,0x23375));var getTime=new Date()[_0x245488(0x1bd)]('HI',{'timeZone':'Asia/Kolkata'})['split']('\x20')[0x1],whichType={'weekday':_0x245488(0x1c3),'year':'numeric','month':_0x245488(0x1c3),'day':_0x245488(0x1c7)},getDate=new Date()[_0x245488(0x1c4)](get_localized_date);async function activeFrom(){var _0x7e6d41=_0x245488;return _0x7e6d41(0x1c5)+getTime+'```\x0a```📅\x20Date\x20:'+getDate+'```';} // Active From
+
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
     while (L && this.length) {
