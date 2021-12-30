@@ -66,6 +66,8 @@ Array.prototype.remove = function() {
     return this;
 };
 
+let version = await Modules.webwa_version();
+
 async function Alexa () {
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAlexaDB.findAll({
@@ -76,7 +78,7 @@ async function Alexa () {
    
     const WhatsAlexa = new WAConnection();
     const Session = new StringSession();
-    WhatsAlexa.version = [3, 3234, 9];
+    WhatsAlexa.version = version;
     WhatsAlexa.setMaxListeners(0);
 
     WhatsAlexa.logger.level = config.DEBUG ? 'debug' : 'warn';
