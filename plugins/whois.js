@@ -73,17 +73,14 @@ if (CON.WORKTYPE == 'private') {
             const msg = `*Grup ID:* ${json.id} \n` + Lang.SUB + `${nwjson.subject} \n` + Lang.OWN + `${json.owner} \n` + Lang.COD + `${code} \n` + user_count_msg + Lang.DES + `\n\n${nwjson.desc}`
             var ppUrl = await message.client.getProfilePicture(message.jid) 
             if (ppUrl === undefined || ppUrl === null || ppUrl == '') {
-                await message.client.sendMessage(
-                    message.jid, 
-                    msg, 
-                    MessageType.text
+                await message.sendReply(
+                    msg
                 );
             } else {
                 const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
-                await message.sendMessage(
-                    Buffer.from(resim.data), 
-                    MessageType.image, 
-                    {caption: msg, mimetype: Mimetype.png}
+                await message.sendImage(
+                    Buffer.from(resim.data),
+                    msg
                 );
             }
         }
@@ -93,17 +90,14 @@ if (CON.WORKTYPE == 'private') {
             var usexists = await message.client.isOnWhatsApp(message.jid)
             const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
             if (usppUrl === undefined || usppUrl === null || usppUrl == '') {
-                await message.client.sendMessage(
-                    message.jid, 
-                    nwmsg, 
-                    MessageType.text
+                await message.client.sendReply(
+                    nwmsg
                 );
             } else {
                 const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
-                await message.sendMessage(
+                await message.sendImage(
                     Buffer.from(resimnw.data), 
-                    MessageType.image, 
-                    { caption: nwmsg, mimetype: Mimetype.png }
+                    nwmsg
                 );
             }       
         }
