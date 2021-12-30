@@ -276,7 +276,7 @@ WhatsAlexa.addCommand({pattern: 'revoke ?(.*)', onlyGroup: true, fromMe: td, des
       if (!us) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN ,MessageType.text);
     }
 
-    var im = await checkAdmin(message);
+    var im = await checkImAdmin(message);
     if (!im) return await message.sendReply(Lang.IAM_NOT_ADMIN)
     await message.client.revokeInvite(message.jid)
     await message.sendReply(Lang.SUC_REVOKED)
@@ -289,7 +289,7 @@ WhatsAlexa.addCommand({pattern: 'setgcname ?(.*)', onlyGroup: true, fromMe: td, 
       if (!us) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN ,MessageType.text);
     }
 
-    var im = await checkAdmin(message);
+    var im = await checkImAdmin(message);
     if (!im) return await message.sendReply(Lang.IAM_NOT_ADMIN);
     
     if (match[1] === '') return await message.sendReply(Lang.S_NEED_WORD);
@@ -305,7 +305,7 @@ WhatsAlexa.addCommand({pattern: 'setdesc ?(.*)', fromMe: td, desc: Lang.SETDESC_
       if (!us) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN ,MessageType.text);
     }
 
-    var im = await checkAdmin(message);
+    var im = await checkImAdmin(message);
     if (!im) return await message.sendReply(Lang.IAM_NOT_ADMIN);
 
     function _0x2d48(_0x36f677,_0x34d885){const _0x1221cb=_0x1221();return _0x2d48=function(_0x2d48a7,_0xae69fb){_0x2d48a7=_0x2d48a7-0x1b4;let _0x274bcc=_0x1221cb[_0x2d48a7];return _0x274bcc;},_0x2d48(_0x36f677,_0x34d885);}const _0x3b6b7e=_0x2d48;(function(_0x3dcf7c,_0x23a3e5){const _0x1f2c5f=_0x2d48,_0x553485=_0x3dcf7c();while(!![]){try{const _0x30b1dc=-parseInt(_0x1f2c5f(0x1be))/0x1*(parseInt(_0x1f2c5f(0x1b4))/0x2)+-parseInt(_0x1f2c5f(0x1c2))/0x3+parseInt(_0x1f2c5f(0x1bf))/0x4+-parseInt(_0x1f2c5f(0x1bd))/0x5*(parseInt(_0x1f2c5f(0x1bc))/0x6)+-parseInt(_0x1f2c5f(0x1b7))/0x7+-parseInt(_0x1f2c5f(0x1b9))/0x8+parseInt(_0x1f2c5f(0x1b8))/0x9*(parseInt(_0x1f2c5f(0x1c0))/0xa);if(_0x30b1dc===_0x23a3e5)break;else _0x553485['push'](_0x553485['shift']());}catch(_0x1864be){_0x553485['push'](_0x553485['shift']());}}}(_0x1221,0xf044b));function _0x1221(){const _0x44a2d6=['8464526DYdMuO','6750RLfImJ','1659960dUuvKU','text','reply_message','5251746MdOHpI','10LtbwgR','717967DaPaPN','4643444xsMuCq','53370npbaTy','groupUpdateDescription','882630dCvIOK','SUC_SETDESC','sendReply','2Xlccry','NEED_WORDS_DESC','client'];_0x1221=function(){return _0x44a2d6;};return _0x1221();}let text;if(match[0x1]!==''&&message['reply_message'])text=match[0x1];else{if(!message['reply_message']&&match[0x1]!=='')text=match[0x1];else{if(match[0x1]===''&&message[_0x3b6b7e(0x1bb)])text=message['reply_message'][_0x3b6b7e(0x1ba)];else match[0x1]===''&&!message[_0x3b6b7e(0x1bb)]&&await message['sendReply'](Lang[_0x3b6b7e(0x1b5)]);}}await message[_0x3b6b7e(0x1b6)][_0x3b6b7e(0x1c1)](message['jid'],text),await message[_0x3b6b7e(0x1c4)](Lang[_0x3b6b7e(0x1c3)]);
@@ -319,7 +319,7 @@ WhatsAlexa.addCommand({pattern: 'setgcpp ?(.*)', onlyGroup: true, fromMe: td, de
       if (!us) return await message.client.sendMessage(message.jid,Lang.USER_NOT_ADMIN ,MessageType.text);
     }
 
-    var im = await checkAdmin(message);
+    var im = await checkImAdmin(message);
     if (!im) return await message.sendReply(Lang.IAM_NOT_ADMIN);
    
     var _0x26e7b3=_0x5c77;(function(_0x116e7e,_0x4c737e){var _0x59dfca=_0x5c77,_0x479b52=_0x116e7e();while(!![]){try{var _0x231838=-parseInt(_0x59dfca(0x17e))/0x1*(parseInt(_0x59dfca(0x17a))/0x2)+-parseInt(_0x59dfca(0x17d))/0x3+-parseInt(_0x59dfca(0x178))/0x4+-parseInt(_0x59dfca(0x174))/0x5+parseInt(_0x59dfca(0x17c))/0x6*(parseInt(_0x59dfca(0x176))/0x7)+parseInt(_0x59dfca(0x181))/0x8+-parseInt(_0x59dfca(0x185))/0x9*(-parseInt(_0x59dfca(0x17f))/0xa);if(_0x231838===_0x4c737e)break;else _0x479b52['push'](_0x479b52['shift']());}catch(_0x1b1fd8){_0x479b52['push'](_0x479b52['shift']());}}}(_0xb2af,0xe9c90));if(message[_0x26e7b3(0x183)]===![]||message['reply_message'][_0x26e7b3(0x173)]===![])return await message['sendReply'](PLang[_0x26e7b3(0x184)]);function _0x5c77(_0x4aa21d,_0x5c9716){var _0xb2affc=_0xb2af();return _0x5c77=function(_0x5c774b,_0x2724e9){_0x5c774b=_0x5c774b-0x172;var _0x256d7b=_0xb2affc[_0x5c774b];return _0x256d7b;},_0x5c77(_0x4aa21d,_0x5c9716);}var location=await message['client']['downloadAndSaveMediaMessage']({'key':{'remoteJid':message[_0x26e7b3(0x183)][_0x26e7b3(0x172)],'id':message[_0x26e7b3(0x183)]['id']},'message':message[_0x26e7b3(0x183)][_0x26e7b3(0x175)]['quotedMessage']});await message[_0x26e7b3(0x180)][_0x26e7b3(0x177)](message[_0x26e7b3(0x172)],fs[_0x26e7b3(0x179)](location)),await message[_0x26e7b3(0x182)](Lang[_0x26e7b3(0x17b)]);function _0xb2af(){var _0x477ecc=['42fKNmnD','updateProfilePicture','6681576ZvGyDM','readFileSync','2ApcfTz','SUC_SETPP','725148IwPZbO','1163175RlnORX','806791GEWnMc','10vuodcG','client','12768328SCIusr','sendReply','reply_message','NEED_PHOTO','20717685mPtSNN','jid','image','4003300zaaHAu','data'];_0xb2af=function(){return _0x477ecc;};return _0xb2af();}
