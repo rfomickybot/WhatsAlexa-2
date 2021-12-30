@@ -90,7 +90,7 @@ async function Alexa () {
 
     WhatsAlexa.on ('open', async () => {
         console.log(
-            chalk.blueBright.italic('🔁 LOADING YOUR SESSION...')
+            chalk.blueBright.italic('✅️ SUCCESSFULLY LOADED SESSION!')
         );
 
         const authInfo = WhatsAlexa.base64EncodedAuthInfo();
@@ -99,10 +99,10 @@ async function Alexa () {
         } else {
             await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
         }
-    })    
+    })   
 
         console.log(
-            chalk.blueBright.italic('✅️ SUCCESSFULLY LOADED SESSION!')
+            chalk.blueBright.italic('🔁 LOADING YOUR SESSION...')
         );
 
     WhatsAlexa.on('connecting', async () => {
