@@ -49,7 +49,7 @@ WhatsAlexa.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC
 }));
 
 
-WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
+/*WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     filtreler.map(
@@ -60,4 +60,4 @@ WhatsAlexa.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
             }
         }
     );
-}));
+}));*/
