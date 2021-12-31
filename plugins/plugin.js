@@ -16,6 +16,19 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
+async function insertPlugin(plugin_name, body, url) {
+  fs.writeFileSync('./plugins/' + plugin_name + '.js', body);
+  try {
+      require('./' + plugin_name);
+  } catch (e) {
+      fs.unlinkSync('/root/WhatsAlexa/plugins/' + plugin_name + '.js')
+      return await message.sendReply(Lang.INVALID_PLUGIN + ' ```' + e + '```');
+  }
+
+  await Db.installPlugin(url, plugin_name);
+  await message.sendReply(Lang.INSTALLED);
+}
+
 WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_URL, MessageType.text, {contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: message.data});
     try {
@@ -39,17 +52,11 @@ WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL
         } else {
             plugin_name = "__" + Math.random().toString(36).substring(8);
         }
-
-        fs.writeFileSync('./plugins/' + plugin_name + '.js', response.body);
         try {
-            require('./' + plugin_name);
-        } catch (e) {
-            fs.unlinkSync('/root/WhatsAlexa/plugins/' + plugin_name + '.js')
-            return await message.sendReply(Lang.INVALID_PLUGIN + ' ```' + e + '```');
+           await insertPlugin(plugin_name, response.body, url);
+        } catch (td) {
+           await message.sendReply('*An Error Occurred!*\n' + td);
         }
-
-        await Db.installPlugin(url, plugin_name);
-        await message.sendReply(Lang.INSTALLED);
     }
 }));
 
