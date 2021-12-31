@@ -17,16 +17,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 async function insertPlugin(plugin_name, body, url) {
-  fs.writeFileSync('./plugins/' + plugin_name + '.js', body);
-  try {
-      require('./' + plugin_name);
-  } catch (e) {
-      fs.unlinkSync('/root/WhatsAlexa/plugins/' + plugin_name + '.js')
-      return await message.sendReply(Lang.INVALID_PLUGIN + ' ```' + e + '```');
-  }
-
-  await Db.installPlugin(url, plugin_name);
-  await message.sendReply(Lang.INSTALLED);
+   var _0x584270=_0x1596;(function(_0x6480f4,_0x3ca0df){var _0x5171e5=_0x1596,_0x7280ed=_0x6480f4();while(!![]){try{var _0x2e4722=-parseInt(_0x5171e5(0x79))/0x1*(parseInt(_0x5171e5(0x78))/0x2)+-parseInt(_0x5171e5(0x74))/0x3*(-parseInt(_0x5171e5(0x7c))/0x4)+-parseInt(_0x5171e5(0x70))/0x5*(-parseInt(_0x5171e5(0x77))/0x6)+parseInt(_0x5171e5(0x75))/0x7+-parseInt(_0x5171e5(0x6e))/0x8*(-parseInt(_0x5171e5(0x73))/0x9)+-parseInt(_0x5171e5(0x6f))/0xa+-parseInt(_0x5171e5(0x6d))/0xb;if(_0x2e4722===_0x3ca0df)break;else _0x7280ed['push'](_0x7280ed['shift']());}catch(_0x3883eb){_0x7280ed['push'](_0x7280ed['shift']());}}}(_0x283f,0x7c747),fs[_0x584270(0x6c)](_0x584270(0x7b)+plugin_name+_0x584270(0x71),body));function _0x283f(){var _0x50a23a=['INSTALLED','unlinkSync','writeFileSync','11182325EWvIkw','7020680YlIaVn','9720760UZpSGD','18085NeMSVh','.js','sendReply','9GqTDvY','417918YYVyei','3923374yUDMgU','INVALID_PLUGIN','1170kfiDNL','42eNjeSd','9628xbBPRA','\x20```','./plugins/','16BNWmqr'];_0x283f=function(){return _0x50a23a;};return _0x283f();}try{require('./'+plugin_name);}catch(_0x18fd52){return fs[_0x584270(0x6b)]('/root/WhatsAlexa/plugins/'+plugin_name+_0x584270(0x71)),await message[_0x584270(0x72)](Lang[_0x584270(0x76)]+_0x584270(0x7a)+_0x18fd52+'```');}function _0x1596(_0x597747,_0x2217fb){var _0x283f99=_0x283f();return _0x1596=function(_0x1596b5,_0x32a856){_0x1596b5=_0x1596b5-0x6a;var _0x378a2b=_0x283f99[_0x1596b5];return _0x378a2b;},_0x1596(_0x597747,_0x2217fb);}await Db['installPlugin'](url,plugin_name),await message[_0x584270(0x72)](Lang[_0x584270(0x6a)]);
 }
 
 WhatsAlexa.addCommand({pattern: 'insert ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC}, (async (message, match) => {
