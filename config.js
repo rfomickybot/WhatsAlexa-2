@@ -30,7 +30,7 @@ module.exports = {
     DEMOTEMSG: process.env.DEMOTE_MESSAGE === undefined ? 'default' : process.env.DEMOTE_MESSAGE,
     BANMSG: process.env.BAN_MESSAGE === undefined ? 'default' : process.env.BAN_MESSAGE,
     AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
-    BOT_PRESENCE: process.env.BOT_PRESENCE === undefined ? 'offline' : process.env.BOT_PRESENCE,
+    BOT_PRESENCE: process.env.BOT_PRESENCE === undefined ? 'none' : process.env.BOT_PRESENCE,
     PVTDELMSG: process.env.PRIVATE_DELETING_MESSAGE === undefined ? 'true' : process.env.PRIVATE_DELETING_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[#.!]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
