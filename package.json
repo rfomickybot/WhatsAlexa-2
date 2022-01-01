@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/TOXIC-DEVIL/WhatsAlexa#readme",
   "dependencies": {
-    "whatsalexa-modules": "1.0.1"
+    "whatsalexa-modules": "^1.0.0"
   }
 }
