@@ -50,6 +50,42 @@ const _0x4dd97e=_0x5f2b;(function(_0x231d20,_0x495e5b){const _0x3be458=_0x5f2b,_
 
     }));
 
+    WhatsAlexa.addCommand({pattern: 'write ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://xteam.xyz/magernulis6?text=${match[1]}&APIKEY=${Config.XTEAM_API}`, { responseType: 'arraybuffer' })
+
+    await message.sendImage(Buffer.from(webimage.data), tdc);
+
+    }));
+
+    WhatsAlexa.addCommand({pattern: 'fabric ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+
+    var webimage = await axios.get(`https://xteam.xyz/textpro/fabric?text=${match[1]}&APIKEY=${Config.XTEAM_API}`, { responseType: 'arraybuffer' })
+
+    await message.sendImage(Buffer.from(webimage.data), tdc);
+
+    }));
+
+    WhatsAlexa.addCommand({pattern: 'stone ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
+  
+  var topText, bottomText;
+    if (match[1].includes('/')) {
+        var split = match[1].split('/');
+        bottomText = split[1];
+        topText = split[0];
+}
+
+    var webimage = await axios.get(`https://xteam.xyz/textpro/stone?text=${topText}&text2=${bottomText}&APIKEY=${Config.XTEAM_API}`, { responseType: 'arraybuffer' })
+
+    await message.sendImage(Buffer.from(webimage.data), tdc);
+    }));
+
     WhatsAlexa.addCommand({pattern: 'flame ?(.*)', fromMe: td, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_WORD);
