@@ -66,9 +66,8 @@ Array.prototype.remove = function() {
     return this;
 };
 
-let version = await Modules.webwa_version();
-
 async function Alexa () {
+    let version = await Modules.webwa_version();
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAlexaDB.findAll({
         where: {
