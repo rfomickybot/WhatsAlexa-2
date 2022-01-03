@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const config = require('./config');
 const pkg = require('./package.json');
 const axios = require('axios');
-const Modules = require('whatsalexa-modules');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence, ChatModification} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./alexa/');
@@ -67,7 +66,6 @@ Array.prototype.remove = function() {
 };
 
 async function Alexa () {
-    let version = await Modules.webwa_version();
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAlexaDB.findAll({
         where: {
@@ -77,7 +75,7 @@ async function Alexa () {
    
     const WhatsAlexa = new WAConnection();
     const Session = new StringSession();
-    WhatsAlexa.version = version;
+    WhatsAlexa.version = [3, 3234, 9];
     WhatsAlexa.setMaxListeners(0);
 
     WhatsAlexa.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -127,15 +125,15 @@ async function Alexa () {
         function _0xccb3(){var _0x1597e6=['green','76540CjMqFx','797496yHdlhe','22GDsybE','ATS','bold','352816MiUEzx','45754ghyTZE','A\x20IS\x20NOW\x20ACTIVE\x20IN\x20YOUR\x20ACCOUNT!','889923jVdypB','3576769PsQJbr','128kiBpGY','8236053MwaQGY'];_0xccb3=function(){return _0x1597e6;};return _0xccb3();}var _0x404828=_0x3fe5;function _0x3fe5(_0x3837a9,_0x37675f){var _0xccb320=_0xccb3();return _0x3fe5=function(_0x3fe574,_0x4b349c){_0x3fe574=_0x3fe574-0x1c2;var _0x39b1f1=_0xccb320[_0x3fe574];return _0x39b1f1;},_0x3fe5(_0x3837a9,_0x37675f);}(function(_0xbd7e6a,_0xed2299){var _0x38c222=_0x3fe5,_0x384abe=_0xbd7e6a();while(!![]){try{var _0x4e926a=parseInt(_0x38c222(0x1cd))/0x1*(parseInt(_0x38c222(0x1c4))/0x2)+parseInt(_0x38c222(0x1c6))/0x3+-parseInt(_0x38c222(0x1c8))/0x4*(parseInt(_0x38c222(0x1cb))/0x5)+-parseInt(_0x38c222(0x1cc))/0x6+-parseInt(_0x38c222(0x1c7))/0x7+-parseInt(_0x38c222(0x1c3))/0x8+parseInt(_0x38c222(0x1c9))/0x9;if(_0x4e926a===_0xed2299)break;else _0x384abe['push'](_0x384abe['shift']());}catch(_0x22fc0b){_0x384abe['push'](_0x384abe['shift']());}}}(_0xccb3,0x8327b),console['log'](chalk[_0x404828(0x1ca)][_0x404828(0x1c2)]('🎉\x20W'+'H'+_0x404828(0x1ce)+'AL'+'EX'+_0x404828(0x1c5))));
 
          if (config.LANG == 'EN') {
-             let enmsg = await Modules.start_message('EN', WhatsAlexa.user.jid);
+             let enmsg = `『 WhatsAlexa 』\n\nHello ${WhatsAlexa.user.name}!\n\n*🆘 General Help For You! 🆘*\n\n🔹 *#alive:* Check if the bot is running.\n\n🔹 *#list:* Shows the complete list of commands.\n\n🔹 *#restart:* It Restarts the bot.\n\n🔹 *#shutdown:* It Shutdown/Turn off the bot.\n\n *⚠ Warning, If you shutdown/turn off, there is no command to turn on the bot So You must got to heroku & turn on the worker. ⚠*.\n\nThank You For Using WhatsAlexa 💖`
              await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: enmsg});
              
          } else if (config.LANG == 'ID') {
-             let idmsg = await Modules.start_message('ID', WhatsAlexa.user.jid);
+             let idmsg = `『 WhatsAlexa 』\n\nHalo ${WhatsAlexa.user.name}!\n\n*🆘 Bantuan umum 🆘*\n\n🔹 *#alive:* Periksa apakah bot sedang berjalan.\n\n🔹 *#list:* Menampilkan daftar lengkap perintah.\n\n🔹 *#restart:* Ini me-restart bot.\n\n🔹 *#shutdown:* Ini Matikan/Matikan bot.\n\n *⚠ Peringatan, Jika Anda mematikan/mematikan, tidak ada perintah untuk menghidupkan bot Jadi Anda harus pergi ke heroku & Nyalakan worker. ⚠*.\n\nTerima Kasih Telah Menggunakan WhatsAlexa 💖`
              await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: idmsg});
              
          } else {
-             let mlmsg = await Modules.start_message('ML', WhatsAlexa.user.jid);
+             let mlmsg = `『 WhatsAlexa 』\n\nനമസ്കാരം ${WhatsAlexa.user.name}!\n\n*🆘 പൊതുവായ സഹായം 🆘*\n\n🔹 *#alive:* ബോട്ട് പ്രവർത്തിക്കുന്നുണ്ടോയെന്ന് പരിശോധിക്കുന്നു.\n\n🔹 *#list:* കമാൻഡുകളുടെ പൂർണ്ണ ലിസ്റ്റ് കാണിക്കുന്നു.\n\n🔹 *#restart:* ഇത് ബോട്ടിനെ പുനരാരംഭിപ്പിക്കുന്നു.\n\n🔹 *#shutdown:* ഇത് ഷട്ട്ഡൗൺ/ബോട്ട് ഓഫ് ചെയ്യുന്നു.\n\n *⚠ മുന്നറിയിപ്പ്, നിങ്ങൾ ഷട്ട്ഡൗൺ/ഓഫ് ചെയ്യുകയാണെങ്കിൽ, ബോട്ട് ഓണാക്കാൻ ഒരു കമാൻഡും ഇല്ല അതിനാൽ നിങ്ങൾ Heroku ഇല്പോയി worker ഓൺ ചെയ്യണം ⚠*.\n\nWhatsAlexa ഉപയോഗിച്ചതിന് നന്ദി 💖`
              await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: mlmsg});
         }
     });
@@ -270,15 +268,15 @@ async function Alexa () {
                         }
                         catch (error) {
                             if (config.LANG == 'EN') {
-                                let erren = await Modules.error_message('EN');
+                                let erren = `*『 ERROR 』*\n\n*WhatsAlexa an error has occurred!*\n_Report this error to the developer [ TOXIC-DEVIL ]._\n\n*Error:*`
                                 await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: erren + '```' + error + '```\n\n' });
                                 
                             } else if (config.LANG == 'ML') {
-                                let errml = await Modules.error_message('ML');
+                                let errml = `*『 പിശക് 』*\n\n*WhatsAlexa പിശക് സംഭവിച്ചു!*\n_ഈ പിശക് ഡെവലപ്പറെ അറിയിക്കുക [ TOXIC-DEVIL ]._\n\n*പിശക്:*`
                                 await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: errml + '```' + error + '```\n\n' });
                                 
                             } else {
-                                let errid = await Modules.error_message('ID');
+                                let errid = `*『 KESALAHAN 』*\n\n*WhatsAlexa telah terjadi kesalahan!*\n_Laporkan kesalahan ini ke pengembang [ TOXIC-DEVIL ]._\n\n*Kesalahan:*`
                                 await WhatsAlexa.sendMessage(WhatsAlexa.user.jid, fs.readFileSync("./src/image/WhatsAlexa.png"), MessageType.image, { mimetype: Mimetype.png, caption: errid + '```' + error + '```\n\n' });
                             }
                         }
